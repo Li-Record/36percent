@@ -27,3 +27,4 @@ API 申請 https://vue-course-api.hexschool.io/
 
 ### 使用套件
 axios
+normalize.css
