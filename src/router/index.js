@@ -1,7 +1,13 @@
 import Vue from 'vue'
+
+// ajax 套件
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
+Vue.use(VueAxios, axios)
 Vue.use(VueRouter)
 
 const routes = [
