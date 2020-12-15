@@ -29,4 +29,4 @@ API 申請 https://vue-course-api.hexschool.io/
 axios
 normalize.css
 FontAwesome
-Swiper Vue.js [https://swiperjs.com/vue/]
+vue-awesome-swiper [https://github.com/surmon-china/vue-awesome-swiper]
