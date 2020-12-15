@@ -5,12 +5,11 @@
 </template>
 
 <style lang="sass">
-@import '../sass/page/home.sass'
 </style>
 
 <script>
 // @ is an alias to /src
-import Navbar from "@/components/Navbar.vue";
+import Navbar from "@/components/navbar/Navbar.vue";
 
 export default {
   name: "Home",

@@ -1,13 +1,17 @@
+
 import Vue from 'vue'
 
 // ajax 套件
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
+// 引入 sass
+import './sass/main.sass'
+
 import App from './App.vue'
 import router from './router'
 
-import 'normalize.css/normalize.css'
+
 
 Vue.config.productionTip = false
 
