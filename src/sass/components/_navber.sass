@@ -1,17 +1,18 @@
 .c-
   &navbar
     display: flex
+    align-items: center
     margin-top: 1.5rem
     &_logo
-      margin-right: .5rem
+      margin-right: 1rem
       img
         width: 115px
       
-  &nav
-    align-self: center
-    width: 50%
-    nav
-      display: flex
+    &_nav
+      width: 50%
+      margin-right: auto
+      nav
+        display: flex
     &_item
       text-align: center
       width: 25%
@@ -20,3 +21,11 @@
     &_link
       display: block
       color: $secondary
+    &_service
+      width: 12%
+      display: flex
+      justify-content: space-around
+      align-items: center
+  &service
+    &_login
+      font-size: $font-sm 
