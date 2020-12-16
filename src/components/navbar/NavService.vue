@@ -1,6 +1,11 @@
 <template>
   <div class="c-navbar_service">
-    <div class="c-service_login">
+    <div class="c-service_item c-service_admin">
+      <router-link to="admin">
+        後台登入
+      </router-link>
+    </div>
+    <div class="c-service_item c-service_login">
       <router-link to="login">
         登入/註冊
       </router-link>

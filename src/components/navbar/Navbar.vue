@@ -1,9 +1,12 @@
 <template>
-  <div class="c-navbar">
-    <NavLogo></NavLogo>
-    <NavItems></NavItems>
-    <NavService></NavService>
-  </div>
+  <header>
+    <div class="c-navbar" :class="{'c-navbar_active': isScroll}">
+      <NavLogo></NavLogo>
+      <NavItems></NavItems>
+      <NavService></NavService>
+    </div>
+  </header>
+  
 </template>
 
 <style lang="sass" scoped>
@@ -16,10 +19,28 @@ import NavService from "@/components/navbar/NavService.vue";
 
 export default {
   name: "Navbar",
+  data() {
+    return {
+      isScroll: false
+    }
+  },
   components: {
     NavItems,
     NavLogo,
     NavService,
+  },
+  mounted(){
+    window.addEventListener('scroll', this.navScrollStyle, false);
+  },
+  methods: {
+    navScrollStyle() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop > 0) {
+        this.isScroll = true;
+      }else {
+        this.isScroll = false;
+      }
+    }
   },
 };
 </script>

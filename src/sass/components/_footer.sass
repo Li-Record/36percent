@@ -1,0 +1,29 @@
+.c-
+  &footer
+    height: 90px
+    padding: 0 3rem
+    font-size: $font-sm
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+      display: flex
+      :nth-child(1)
+        padding-left: 0
+      :nth-child(4)
+        border: 0px
+        padding-right: 0
+    a
+      display: block
+      color: $secondary
+    &_content
+      border-top: 1px solid $footer-secondary
+      padding: 2rem 0
+      display: flex
+      justify-content: space-between
+
+    &_item
+      border-right: 1px $secondary solid
+      padding: 0 1rem
+      :hover
+        text-decoration: underline

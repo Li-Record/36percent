@@ -1,7 +1,8 @@
 <template>
   <div class="p-home">
-    <Navbar></Navbar>
-    <Banner></Banner>
+    <main>
+      <Banner></Banner>
+    </main>
   </div>
 </template>
 
@@ -9,15 +10,16 @@
 </style>
 
 <script>
-// @ is an alias to /src
-import Navbar from "@/components/navbar/Navbar.vue";
 import Banner from "@/components/Banner.vue";
 
 export default {
   name: "Home",
+  data() {
+    return {}
+  },
   components: {
-    Navbar,
     Banner,
   },
+  
 };
 </script>

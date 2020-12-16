@@ -1,0 +1,26 @@
+@mixin pc-width {
+  @media (max-width: $pc-media) {
+    @content
+  }
+}
+
+@mixin pad-width {
+  @media (max-width: $pad-media) {
+    @content
+  }
+}
+
+@mixin pad-width_s {
+  @media (max-width: $pad-media_s) {
+    @content
+  }
+}
+
+@mixin phone-width {
+  @media (max-width: $phone-media) {
+    @content
+  }
+}
+
+
+    
