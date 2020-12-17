@@ -11,10 +11,12 @@
         <ul>
           <li class="c-footer_item"><a href="#">網站使用條款</a></li>
           <li class="c-footer_item"><a href="#">隱私權政策</a></li>
-          <li class="c-footer_item"><a href="#">免責聲明</a></li>
+          <li class="c-footer_item">
+            <router-link to="admin"> 後台登入 </router-link>
+          </li>
           <li class="c-footer_item"><a href="#">© 2020 Yi Ming Lee</a></li>
         </ul>
-      </div>      
+      </div>
     </div>
   </footer>
 </template>
