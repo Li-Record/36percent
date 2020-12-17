@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import AdminLogin from '../page/AdminLogin.vue'
+import Login from '../components/Login.vue'
 
 Vue.use(VueRouter)
 
@@ -13,8 +13,8 @@ const routes = [
   },
   {
     path: '/admin',
-    name: 'AdminLogin',
-    component: AdminLogin
+    name: 'Login',
+    component: Login
   }
 ]
 

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="c-navbar" :class="{'c-navbar_active': isScroll}">
+    <div class="l-navbar" :class="{'l-navbar_active': isScroll}">
       <NavLogo></NavLogo>
       <NavItems></NavItems>
       <NavService></NavService>

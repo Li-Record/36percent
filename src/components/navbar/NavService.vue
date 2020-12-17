@@ -1,11 +1,11 @@
 <template>
-  <div class="c-navbar_service">
-    <div class="c-service_item c-service_login">
+  <div class="l-navbar_service">
+    <div class="l-service_item l-service_login">
       <router-link to="login">
         登入/註冊
       </router-link>
     </div>
-    <div class="c-service_cart">
+    <div class="l-service_cart">
       <router-link to="cart">
         <font-awesome-icon icon="cart-arrow-down" />
       </router-link>

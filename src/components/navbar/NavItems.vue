@@ -1,8 +1,8 @@
 <template>
-  <div class="c-navbar_nav">
+  <div class="l-navbar_nav">
     <nav>
-      <div class="c-navbar_item" v-for="(item, index) in navItems" :key="index">
-        <router-link :to="{ path: '/' + item.path }" class="c-navbar_link">
+      <div class="l-navbar_item" v-for="(item, index) in navItems" :key="index">
+        <router-link :to="{ path: '/' + item.path }" class="l-navbar_link">
         {{ item.title }}
         </router-link>
       </div>
