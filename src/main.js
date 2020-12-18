@@ -11,8 +11,6 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
- 
-
 // 引入 sass
 import './sass/main.sass'
 
@@ -33,13 +31,11 @@ Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
 library.add(faCartArrowDown)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
-
 Vue.config.productionTip = false
 
 Vue.use(VueAxios, axios)
 
-
 new Vue({
-  router, 
+  router,
   render: h => h(App)
 }).$mount('#app')

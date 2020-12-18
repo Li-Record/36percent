@@ -3,23 +3,51 @@
     max-width: 500px
     width: 100%
     height: 500px
-    padding: 1rem
-    background-color: $main-primary
+    padding: 6rem
     position: absolute
     top: 55%
     left: 50%
-    transform: translate(-50%, -50%) rotate(30deg)
-
+    &_bg
+      background-color: $main-primary
+      transform: translate(-50%, -50%) rotate(20deg)
     &_border
-      max-width: 500px
-      width: 100%
-      height: 500px
-      padding: 1rem
-      position: absolute
-      top: 55%
-      left: 50%
       transform: translate(-50%, -50%)
       background-image: url(../assets/border.png) 
       background-size: 100%
       background-position: center
       background-repeat: no-repeat
+      display: flex
+      align-items: center
+      justify-content: center
+    &_inputWrap
+      margin-bottom: 1.5rem
+    &_label
+      margin-right: 1rem
+      font-size: 1.5rem
+    &_input
+      background: $main-primary
+      padding: .6rem
+      border-top: 0
+      border-left: 0
+      border-right: 0
+      border-bottom: 2px solid $primary
+    &_btn
+      display: block
+      padding: 8px 0
+      background-color: $primary
+      color: #fff
+      border: 0
+      width: 100%
+      border-radius: 5px
+      cursor: pointer
+      transition: all .2s
+    &_btn:hover
+      background-color: $secondary
+
+    &_link
+      display: flex
+      justify-content: space-between
+      padding: 0 .6rem 
+      a:hover
+        text-decoration: underline
+        color: $primary
