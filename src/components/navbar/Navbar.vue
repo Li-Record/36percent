@@ -3,6 +3,7 @@
     <div class="l-navbar" :class="{'l-navbar_active': isScroll}">
       <NavLogo></NavLogo>
       <NavItems></NavItems>
+      <NavMenu></NavMenu>
       <NavService :is-login="isLogin"></NavService>
     </div>
   </header>
@@ -16,6 +17,7 @@
 import NavItems from "@/components/navbar/NavItems.vue";
 import NavLogo from "@/components/navbar/NavLogo.vue";
 import NavService from "@/components/navbar/NavService.vue";
+import NavMenu from "@/components/navbar/NavMenu.vue";
 
 export default {
   name: "Navbar",
@@ -29,6 +31,7 @@ export default {
     NavItems,
     NavLogo,
     NavService,
+    NavMenu,
   },
   mounted(){
     window.addEventListener('scroll', this.navScrollStyle, false);
