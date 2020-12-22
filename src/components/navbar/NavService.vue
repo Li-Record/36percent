@@ -1,13 +1,8 @@
 <template>
   <div class="l-navbar_service">
     <div class="l-service_item l-service_login">
-      <a href="#" v-if="isLogin" @click.prevent="logout">
-        登出
-      </a>
-      <router-link to="login" v-else>
-        登入/註冊
-      </router-link>
-      
+      <a href="#" v-if="isLogin" @click.prevent="logout"> 登出 </a>
+      <router-link to="login" v-else> 登入/註冊 </router-link>
     </div>
     <div class="l-service_cart">
       <router-link to="cart">
@@ -23,33 +18,20 @@
 <script>
 export default {
   name: "NavService",
+  props: ["isLogin"],
   data() {
     return {
-      isLogin: false,
+      
     };
-  },
-  created () {
-    const vm = this;
-    const api = `${process.env.VUE_APP_PRODUCTS_API_PATH}/api/user/check`;
-    this.$http.post(api).then((response) => {
-      console.log(response);
-      if (response.data.success) {
-        vm.isLogin = true;
-      } else {
-        vm.isLogin = false;
-      }
-    });
   },
   methods: {
     logout() {
       const vm = this;
       const api = `${process.env.VUE_APP_PRODUCTS_API_PATH}/logout`;
       this.$http.post(api).then((response) => {
-        console.log(response);
         if (response.data.success) {
-          // vm.$router.push("/login");
-          vm.isLogin = false;
-          console.log('已登出');
+          alert("已登出");
+          vm.$router.push({ path: '/login' });
         }
       });
     },

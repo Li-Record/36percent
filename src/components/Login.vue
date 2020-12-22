@@ -52,7 +52,15 @@ export default {
       const api = `${process.env.VUE_APP_PRODUCTS_API_PATH}/admin/signin`;
       vm.$http.post(api, vm.user).then((response) => {
         if(response.data.success) {
-          vm.$router.push({ path: '/' })
+          console.log(response);
+          const expired = response.data.expired;
+          const token = response.data.token;
+          document.cookie = `sToken=${token}; expires=${new Date(expired)};`;
+          vm.$router.push({ path: '/' });
+        } else {
+          vm.user.username = "";
+          vm.user.password = "";
+          alert('驗證失敗，請重新登入');
         }
       });
     }

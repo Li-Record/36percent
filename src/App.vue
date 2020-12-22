@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar></Navbar>
+    <Navbar :is-login="isLogin"></Navbar>
     <main class="l-main">
       <router-view />
     </main>
@@ -20,12 +20,32 @@ import Footer from "@/components/Footer.vue";
 export default {
   name: "App",
   data() {
-    return {}
+    return {
+      isLogin: false,
+    }
+  },
+  created () {
+    this.checkLogin();
+  },
+  updated () {
+    this.checkLogin();
   },
   components: {
     Navbar,
     Footer,
   },
-  
+  methods: {
+    checkLogin() {
+      const vm = this;
+      const api = `${process.env.VUE_APP_PRODUCTS_API_PATH}/api/user/check`;
+      vm.$http.post(api).then((response) => {
+        if (response.data.success) {
+          vm.isLogin = true;
+        } else {
+          vm.isLogin = false;
+        }
+      });
+    }
+  },
 };
 </script>

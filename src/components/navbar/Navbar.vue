@@ -3,7 +3,7 @@
     <div class="l-navbar" :class="{'l-navbar_active': isScroll}">
       <NavLogo></NavLogo>
       <NavItems></NavItems>
-      <NavService></NavService>
+      <NavService :is-login="isLogin"></NavService>
     </div>
   </header>
   
@@ -19,6 +19,7 @@ import NavService from "@/components/navbar/NavService.vue";
 
 export default {
   name: "Navbar",
+  props: ["isLogin"],
   data() {
     return {
       isScroll: false
