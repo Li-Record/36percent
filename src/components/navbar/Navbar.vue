@@ -3,8 +3,8 @@
     <div class="l-navbar" :class="{'l-navbar_active': isScroll}">
       <NavLogo></NavLogo>
       <NavItems></NavItems>
-      <NavMenu></NavMenu>
       <NavService :is-login="isLogin"></NavService>
+      <NavMenu></NavMenu>
     </div>
   </header>
   

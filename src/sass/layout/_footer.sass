@@ -11,8 +11,9 @@
       :nth-child(1)
         padding-left: 0
       :nth-child(4)
-        border: 0px
+        border: 0
         padding-right: 0
+      
     a
       display: block
       color: $secondary
@@ -21,12 +22,15 @@
       padding: 2rem 0
       display: flex
       justify-content: space-between
+      
 
     &_item
       border-right: 1px $secondary solid
       padding: 0 1rem
       :hover
         text-decoration: underline
+      @include pad-width
+        border: 0
 
     &_pcOnly
       @include pad-width

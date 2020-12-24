@@ -48,7 +48,7 @@
       @include pad-width
         display: none
 
-    &_menu
+    &_btn
       margin-right: 1rem
       position: relative
       &_toggle
@@ -89,7 +89,25 @@
         content: ""
         top: 275%
         transform: translate(-50%, -50%)
-        
+    &_menu
+      display: none
+      max-width: 600px
+      width: 96%
+      padding: 1rem
+      position: absolute
+      top: 350px
+      left: 110%
+      transform: translate(-50%, 0) rotate(-90deg)
+      background: $border-secondary
+      border-radius: 5px
+      transition: all .2s
+      @include pad-width
+        display: block
+      &_active
+        top: 95px
+        left: 50%
+        transform: translate(-50%, 0) rotate(0)
+
 
 
   &service
